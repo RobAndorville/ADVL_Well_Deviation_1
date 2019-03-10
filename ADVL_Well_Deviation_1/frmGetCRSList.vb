@@ -306,6 +306,11 @@
         Dim decl As New XDeclaration("1.0", "utf-8", "yes")
         Dim doc As New XDocument(decl, Nothing) 'Create an XDocument to store the instructions.
         Dim xmessage As New XElement("XMsg") 'This indicates the start of the message in the XMessage class
+
+        'ADDED 3Feb19:
+        Dim clientAppNetName As New XElement("ClientAppNetName", Main.AppNetName)
+        xmessage.Add(clientAppNetName)
+
         Dim clientName As New XElement("ClientName", Main.ApplicationInfo.Name) 'This tells the coordinate server the name of the client making the request.
         xmessage.Add(clientName)
 
@@ -396,12 +401,16 @@
             If Main.client.State = ServiceModel.CommunicationState.Faulted Then
                 Main.Message.Add("client state is faulted. Message not sent!" & vbCrLf)
             Else
-                Main.client.SendMessageAsync("ADVL_Coordinates_1", doc.ToString)
-                Main.Message.Color = Color.Red
-                Main.Message.FontStyle = FontStyle.Bold
-                Main.Message.XAdd("Message sent to " & "ADVL_Coordinates_1" & ":" & vbCrLf)
-                Main.Message.SetNormalStyle()
-                Main.Message.XAdd(doc.ToString & vbCrLf & vbCrLf)
+                'Main.client.SendMessageAsync("ADVL_Coordinates_1", doc.ToString)
+                Main.client.SendMessageAsync(Main.AppNetName, "ADVL_Coordinates_1", doc.ToString)
+                'Main.Message.Color = Color.Red
+                'Main.Message.FontStyle = FontStyle.Bold
+                'Main.Message.XAdd("Message sent to " & "ADVL_Coordinates_1" & ":" & vbCrLf)
+                'Main.Message.SetNormalStyle()
+                'Main.Message.XAdd(doc.ToString & vbCrLf & vbCrLf)
+                Main.Message.XAddText("Message sent to " & "ADVL_Coordinates_1" & ":" & vbCrLf, "XmlSentNotice")
+                Main.Message.XAddXml(doc.ToString)
+                Main.Message.XAddText(vbCrLf, "Normal") 'Add extra line
             End If
         End If
 
@@ -587,8 +596,15 @@
         Dim decl As New XDeclaration("1.0", "utf-8", "yes")
         Dim doc As New XDocument(decl, Nothing) 'Create an XDocument to store the instructions.
         Dim xmessage As New XElement("XMsg") 'This indicates the start of the message in the XMessage class
-        Dim clientName As New XElement("ClientName", Main.ApplicationInfo.Name) 'This tells the coordinate server the name of the client making the request.
-        xmessage.Add(clientName)
+        'Dim clientName As New XElement("ClientName", Main.ApplicationInfo.Name) 'This tells the coordinate server the name of the client making the request.
+        'xmessage.Add(clientName)
+
+        'ADDED 3Feb19:
+        Dim clientAppNetName As New XElement("ClientAppNetName", Main.AppNetName)
+        xmessage.Add(clientAppNetName)
+
+        Dim clientConnName As New XElement("ClientConnectionName", Main.ConnectionName) 'This tells the coordinate server the name of the client making the request.
+        xmessage.Add(clientConnName)
 
         'Specifications for the Geographic CRS list.:
         Dim operation As New XElement("GetGeographicCRSList")
@@ -663,12 +679,11 @@
                 Main.Message.Add("client state is faulted. Message not sent!" & vbCrLf)
             Else
                 Main.cmbGeoCRS.Items.Clear()
-                Main.client.SendMessageAsync("ADVL_Coordinates_1", doc.ToString)
-                Main.Message.Color = Color.Red
-                Main.Message.FontStyle = FontStyle.Bold
-                Main.Message.XAdd("Message sent to " & "ADVL_Coordinates_1" & ":" & vbCrLf)
-                Main.Message.SetNormalStyle()
-                Main.Message.XAdd(doc.ToString & vbCrLf & vbCrLf)
+                'Main.client.SendMessageAsync("ADVL_Coordinates_1", doc.ToString)
+                Main.client.SendMessageAsync(Main.AppNetName, "ADVL_Coordinates_1", doc.ToString)
+                Main.Message.XAddText("Message sent to " & "ADVL_Coordinates_1" & ":" & vbCrLf, "XmlSentNotice")
+                Main.Message.XAddXml(doc.ToString)
+                Main.Message.XAddText(vbCrLf, "Normal") 'Add extra line
             End If
         End If
 
@@ -681,11 +696,19 @@
         Dim decl As New XDeclaration("1.0", "utf-8", "yes")
         Dim doc As New XDocument(decl, Nothing) 'Create an XDocument to store the instructions.
         Dim xmessage As New XElement("XMsg") 'This indicates the start of the message in the XMessage class
-        Dim clientName As New XElement("ClientName", Main.ApplicationInfo.Name) 'This tells the coordinate server the name of the client making the request.
-        xmessage.Add(clientName)
+        'Dim clientName As New XElement("ClientName", Main.ApplicationInfo.Name) 'This tells the coordinate server the name of the client making the request.
+        'xmessage.Add(clientName)
+
+        'ADDED 3Feb19:
+        Dim clientAppNetName As New XElement("ClientAppNetName", Main.AppNetName)
+        xmessage.Add(clientAppNetName)
+
+        Dim clientConnName As New XElement("ClientConnectionName", Main.ConnectionName) 'This tells the coordinate server the name of the client making the request.
+        xmessage.Add(clientConnName)
 
         'Specifications for the Geographic CRS list.:
-        Dim operation As New XElement("GetProjectedCRSList")
+        'Dim operation As New XElement("GetProjectedCRSList")
+        Dim operation As New XElement("GetProjectedCrsList")
 
         If rbGetAll.Checked Then 'Get all the Projected CRSs
             Dim SelectMethod As New XElement("SelectMethod", "All")
@@ -728,16 +751,13 @@
                 Main.Message.Add("client state is faulted. Message not sent!" & vbCrLf)
             Else
                 Main.cmbProjCRS.Items.Clear()
-                Main.client.SendMessageAsync("ADVL_Coordinates_1", doc.ToString)
-                Main.Message.Color = Color.Red
-                Main.Message.FontStyle = FontStyle.Bold
-                Main.Message.XAdd("Message sent to " & "ADVL_Coordinates_1" & ":" & vbCrLf)
-                Main.Message.SetNormalStyle()
-                Main.Message.XAdd(doc.ToString & vbCrLf & vbCrLf)
+                'Main.client.SendMessageAsync("ADVL_Coordinates_1", doc.ToString)
+                Main.client.SendMessageAsync(Main.AppNetName, "ADVL_Coordinates_1", doc.ToString)
+                Main.Message.XAddText("Message sent to " & "ADVL_Coordinates_1" & ":" & vbCrLf, "XmlSentNotice")
+                Main.Message.XAddXml(doc.ToString)
+                Main.Message.XAddText(vbCrLf, "Normal") 'Add extra line
             End If
         End If
-
-
     End Sub
 
 #End Region 'Form Methods ---------------------------------------------------------------------------------------------------------------------------------------------------------------------

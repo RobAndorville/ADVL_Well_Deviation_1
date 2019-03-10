@@ -23,7 +23,7 @@ limitations under the License.
 - - -
 
 
-The Andorville™ Well Deviation software calculates the deviation of an oil well from deviation log measurements. The software uses the Coordinates application to calculate the projected coordinates of the well location from the geodetic coordinates. The Well Deviation and Coordinates software must be connected to the Application Network for these calculations. The well path is plotted in plan and vertical section views.
+The Andorville™ Well Deviation software calculates the deviation of an oil well from deviation log measurements. The software uses the Coordinates application to calculate the projected coordinates of the well location from the geodetic coordinates. The Well Deviation and Coordinates software must be connected to the Message Service for these calculations. The well path is plotted in plan and vertical section views.
 
 
 

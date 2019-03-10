@@ -23,15 +23,15 @@ Partial Class Main
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim ChartArea4 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend4 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series4 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim ChartArea5 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend5 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series5 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim ChartArea6 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend6 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series6 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea3 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend3 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series3 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Main))
         Me.btnExit = New System.Windows.Forms.Button()
         Me.btnOnline = New System.Windows.Forms.Button()
@@ -39,26 +39,8 @@ Partial Class Main
         Me.btnAppInfo = New System.Windows.Forms.Button()
         Me.btnAndorville = New System.Windows.Forms.Button()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
-        Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.txtLastUsed = New System.Windows.Forms.TextBox()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.txtCreationDate = New System.Windows.Forms.TextBox()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.txtDataLocationPath = New System.Windows.Forms.TextBox()
-        Me.txtDataLocationType = New System.Windows.Forms.TextBox()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.txtSettingsLocationPath = New System.Windows.Forms.TextBox()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.txtSettingsLocationType = New System.Windows.Forms.TextBox()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.txtProjectType = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.txtProjectDescription = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.txtProjectName = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.btnProject = New System.Windows.Forms.Button()
+        Me.TabPage6 = New System.Windows.Forms.TabPage()
+        Me.WebBrowser1 = New System.Windows.Forms.WebBrowser()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
         Me.txtFileName = New System.Windows.Forms.TextBox()
         Me.Label27 = New System.Windows.Forms.Label()
@@ -164,13 +146,58 @@ Partial Class Main
         Me.Chart1 = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.Chart2 = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.Chart3 = New System.Windows.Forms.DataVisualization.Charting.Chart()
+        Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.chkConnect = New System.Windows.Forms.CheckBox()
+        Me.btnOpenProject = New System.Windows.Forms.Button()
+        Me.Label57 = New System.Windows.Forms.Label()
+        Me.txtProjectPath = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.txtAppNetName = New System.Windows.Forms.TextBox()
+        Me.btnOpenAppDir = New System.Windows.Forms.Button()
+        Me.btnOpenSystem = New System.Windows.Forms.Button()
+        Me.btnOpenData = New System.Windows.Forms.Button()
+        Me.btnOpenSettings = New System.Windows.Forms.Button()
+        Me.btnAdd = New System.Windows.Forms.Button()
+        Me.txtParentProject = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.btnParameters = New System.Windows.Forms.Button()
+        Me.Label79 = New System.Windows.Forms.Label()
+        Me.txtSystemLocationType = New System.Windows.Forms.TextBox()
+        Me.txtSystemPath = New System.Windows.Forms.TextBox()
+        Me.Label52 = New System.Windows.Forms.Label()
+        Me.txtCurrentDuration = New System.Windows.Forms.TextBox()
+        Me.Label53 = New System.Windows.Forms.Label()
+        Me.Label54 = New System.Windows.Forms.Label()
+        Me.txtTotalDuration = New System.Windows.Forms.TextBox()
+        Me.Label55 = New System.Windows.Forms.Label()
+        Me.Label56 = New System.Windows.Forms.Label()
+        Me.txtLastUsed = New System.Windows.Forms.TextBox()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.txtCreationDate = New System.Windows.Forms.TextBox()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.txtDataPath = New System.Windows.Forms.TextBox()
+        Me.txtDataLocationType = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.txtSettingsPath = New System.Windows.Forms.TextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.txtSettingsLocationType = New System.Windows.Forms.TextBox()
+        Me.txtProjectType = New System.Windows.Forms.TextBox()
+        Me.txtProjectDescription = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.txtProjectName = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.btnProject = New System.Windows.Forms.Button()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.btnOpen = New System.Windows.Forms.Button()
         Me.btnSave = New System.Windows.Forms.Button()
         Me.btnNew = New System.Windows.Forms.Button()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.btnWebPages = New System.Windows.Forms.Button()
+        Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.Timer3 = New System.Windows.Forms.Timer(Me.components)
         Me.TabControl1.SuspendLayout()
-        Me.TabPage1.SuspendLayout()
+        Me.TabPage6.SuspendLayout()
         Me.TabPage4.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox5.SuspendLayout()
@@ -200,12 +227,13 @@ Partial Class Main
         CType(Me.Chart1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Chart2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Chart3, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage1.SuspendLayout()
         Me.SuspendLayout()
         '
         'btnExit
         '
         Me.btnExit.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnExit.Location = New System.Drawing.Point(926, 12)
+        Me.btnExit.Location = New System.Drawing.Point(703, 12)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(64, 22)
         Me.btnExit.TabIndex = 8
@@ -217,7 +245,7 @@ Partial Class Main
         Me.btnOnline.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnOnline.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnOnline.ForeColor = System.Drawing.Color.Red
-        Me.btnOnline.Location = New System.Drawing.Point(864, 12)
+        Me.btnOnline.Location = New System.Drawing.Point(641, 12)
         Me.btnOnline.Name = "btnOnline"
         Me.btnOnline.Size = New System.Drawing.Size(56, 22)
         Me.btnOnline.TabIndex = 37
@@ -227,7 +255,7 @@ Partial Class Main
         'btnMessages
         '
         Me.btnMessages.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnMessages.Location = New System.Drawing.Point(786, 12)
+        Me.btnMessages.Location = New System.Drawing.Point(563, 12)
         Me.btnMessages.Name = "btnMessages"
         Me.btnMessages.Size = New System.Drawing.Size(72, 22)
         Me.btnMessages.TabIndex = 38
@@ -237,7 +265,7 @@ Partial Class Main
         'btnAppInfo
         '
         Me.btnAppInfo.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnAppInfo.Location = New System.Drawing.Point(685, 12)
+        Me.btnAppInfo.Location = New System.Drawing.Point(462, 12)
         Me.btnAppInfo.Name = "btnAppInfo"
         Me.btnAppInfo.Size = New System.Drawing.Size(95, 22)
         Me.btnAppInfo.TabIndex = 46
@@ -260,209 +288,38 @@ Partial Class Main
         Me.TabControl1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TabControl1.Controls.Add(Me.TabPage1)
+        Me.TabControl1.Controls.Add(Me.TabPage6)
         Me.TabControl1.Controls.Add(Me.TabPage4)
         Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Controls.Add(Me.TabPage3)
         Me.TabControl1.Controls.Add(Me.TabPage5)
+        Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Location = New System.Drawing.Point(12, 40)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(978, 478)
+        Me.TabControl1.Size = New System.Drawing.Size(755, 471)
         Me.TabControl1.TabIndex = 51
         '
-        'TabPage1
+        'TabPage6
         '
-        Me.TabPage1.Controls.Add(Me.txtLastUsed)
-        Me.TabPage1.Controls.Add(Me.Label11)
-        Me.TabPage1.Controls.Add(Me.txtCreationDate)
-        Me.TabPage1.Controls.Add(Me.Label10)
-        Me.TabPage1.Controls.Add(Me.txtDataLocationPath)
-        Me.TabPage1.Controls.Add(Me.txtDataLocationType)
-        Me.TabPage1.Controls.Add(Me.Label9)
-        Me.TabPage1.Controls.Add(Me.Label8)
-        Me.TabPage1.Controls.Add(Me.txtSettingsLocationPath)
-        Me.TabPage1.Controls.Add(Me.Label7)
-        Me.TabPage1.Controls.Add(Me.txtSettingsLocationType)
-        Me.TabPage1.Controls.Add(Me.Label6)
-        Me.TabPage1.Controls.Add(Me.txtProjectType)
-        Me.TabPage1.Controls.Add(Me.Label5)
-        Me.TabPage1.Controls.Add(Me.txtProjectDescription)
-        Me.TabPage1.Controls.Add(Me.Label4)
-        Me.TabPage1.Controls.Add(Me.txtProjectName)
-        Me.TabPage1.Controls.Add(Me.Label3)
-        Me.TabPage1.Controls.Add(Me.btnProject)
-        Me.TabPage1.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(970, 452)
-        Me.TabPage1.TabIndex = 0
-        Me.TabPage1.Text = "Project Information"
-        Me.TabPage1.UseVisualStyleBackColor = True
+        Me.TabPage6.Controls.Add(Me.WebBrowser1)
+        Me.TabPage6.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage6.Name = "TabPage6"
+        Me.TabPage6.Size = New System.Drawing.Size(747, 445)
+        Me.TabPage6.TabIndex = 5
+        Me.TabPage6.Text = "Workflow"
+        Me.TabPage6.UseVisualStyleBackColor = True
         '
-        'txtLastUsed
+        'WebBrowser1
         '
-        Me.txtLastUsed.Location = New System.Drawing.Point(457, 109)
-        Me.txtLastUsed.Name = "txtLastUsed"
-        Me.txtLastUsed.Size = New System.Drawing.Size(150, 20)
-        Me.txtLastUsed.TabIndex = 65
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(374, 112)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(78, 13)
-        Me.Label11.TabIndex = 64
-        Me.Label11.Text = "Date last used:"
-        '
-        'txtCreationDate
-        '
-        Me.txtCreationDate.Location = New System.Drawing.Point(217, 108)
-        Me.txtCreationDate.Name = "txtCreationDate"
-        Me.txtCreationDate.Size = New System.Drawing.Size(150, 20)
-        Me.txtCreationDate.TabIndex = 63
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(138, 112)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(73, 13)
-        Me.Label10.TabIndex = 62
-        Me.Label10.Text = "Creation date:"
-        '
-        'txtDataLocationPath
-        '
-        Me.txtDataLocationPath.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.WebBrowser1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtDataLocationPath.Location = New System.Drawing.Point(215, 186)
-        Me.txtDataLocationPath.Multiline = True
-        Me.txtDataLocationPath.Name = "txtDataLocationPath"
-        Me.txtDataLocationPath.Size = New System.Drawing.Size(426, 46)
-        Me.txtDataLocationPath.TabIndex = 61
-        '
-        'txtDataLocationType
-        '
-        Me.txtDataLocationType.Location = New System.Drawing.Point(124, 186)
-        Me.txtDataLocationType.Name = "txtDataLocationType"
-        Me.txtDataLocationType.Size = New System.Drawing.Size(85, 20)
-        Me.txtDataLocationType.TabIndex = 60
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(112, 215)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(97, 13)
-        Me.Label9.TabIndex = 59
-        Me.Label9.Text = "Data location path:"
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(6, 189)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(96, 13)
-        Me.Label8.TabIndex = 58
-        Me.Label8.Text = "Data location type:"
-        '
-        'txtSettingsLocationPath
-        '
-        Me.txtSettingsLocationPath.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtSettingsLocationPath.Location = New System.Drawing.Point(215, 134)
-        Me.txtSettingsLocationPath.Multiline = True
-        Me.txtSettingsLocationPath.Name = "txtSettingsLocationPath"
-        Me.txtSettingsLocationPath.Size = New System.Drawing.Size(426, 46)
-        Me.txtSettingsLocationPath.TabIndex = 57
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(97, 162)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(112, 13)
-        Me.Label7.TabIndex = 56
-        Me.Label7.Text = "Settings location path:"
-        '
-        'txtSettingsLocationType
-        '
-        Me.txtSettingsLocationType.Location = New System.Drawing.Point(123, 134)
-        Me.txtSettingsLocationType.Name = "txtSettingsLocationType"
-        Me.txtSettingsLocationType.Size = New System.Drawing.Size(86, 20)
-        Me.txtSettingsLocationType.TabIndex = 55
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(6, 137)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(111, 13)
-        Me.Label6.TabIndex = 54
-        Me.Label6.Text = "Settings location type:"
-        '
-        'txtProjectType
-        '
-        Me.txtProjectType.Location = New System.Drawing.Point(46, 109)
-        Me.txtProjectType.Name = "txtProjectType"
-        Me.txtProjectType.Size = New System.Drawing.Size(86, 20)
-        Me.txtProjectType.TabIndex = 53
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(6, 111)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(34, 13)
-        Me.Label5.TabIndex = 52
-        Me.Label5.Text = "Type:"
-        '
-        'txtProjectDescription
-        '
-        Me.txtProjectDescription.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtProjectDescription.Location = New System.Drawing.Point(123, 62)
-        Me.txtProjectDescription.Multiline = True
-        Me.txtProjectDescription.Name = "txtProjectDescription"
-        Me.txtProjectDescription.Size = New System.Drawing.Size(518, 40)
-        Me.txtProjectDescription.TabIndex = 51
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(6, 65)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(63, 13)
-        Me.Label4.TabIndex = 50
-        Me.Label4.Text = "Description:"
-        '
-        'txtProjectName
-        '
-        Me.txtProjectName.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtProjectName.Location = New System.Drawing.Point(123, 36)
-        Me.txtProjectName.Name = "txtProjectName"
-        Me.txtProjectName.Size = New System.Drawing.Size(518, 20)
-        Me.txtProjectName.TabIndex = 49
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(6, 39)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(38, 13)
-        Me.Label3.TabIndex = 48
-        Me.Label3.Text = "Name:"
-        '
-        'btnProject
-        '
-        Me.btnProject.Location = New System.Drawing.Point(6, 6)
-        Me.btnProject.Name = "btnProject"
-        Me.btnProject.Size = New System.Drawing.Size(69, 22)
-        Me.btnProject.TabIndex = 47
-        Me.btnProject.Text = "Project"
-        Me.btnProject.UseVisualStyleBackColor = True
+        Me.WebBrowser1.Location = New System.Drawing.Point(3, 3)
+        Me.WebBrowser1.MinimumSize = New System.Drawing.Size(20, 20)
+        Me.WebBrowser1.Name = "WebBrowser1"
+        Me.WebBrowser1.Size = New System.Drawing.Size(741, 404)
+        Me.WebBrowser1.TabIndex = 69
         '
         'TabPage4
         '
@@ -478,7 +335,7 @@ Partial Class Main
         Me.TabPage4.Controls.Add(Me.Label13)
         Me.TabPage4.Location = New System.Drawing.Point(4, 22)
         Me.TabPage4.Name = "TabPage4"
-        Me.TabPage4.Size = New System.Drawing.Size(970, 452)
+        Me.TabPage4.Size = New System.Drawing.Size(747, 445)
         Me.TabPage4.TabIndex = 3
         Me.TabPage4.Text = "Well Information"
         Me.TabPage4.UseVisualStyleBackColor = True
@@ -996,7 +853,7 @@ Partial Class Main
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(970, 452)
+        Me.TabPage2.Size = New System.Drawing.Size(747, 445)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Deviation Data"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -1019,8 +876,8 @@ Partial Class Main
         '
         Me.SplitContainer1.Panel2.Controls.Add(Me.dgvCalculatedData)
         Me.SplitContainer1.Panel2.Controls.Add(Me.Label2)
-        Me.SplitContainer1.Size = New System.Drawing.Size(939, 435)
-        Me.SplitContainer1.SplitterDistance = 360
+        Me.SplitContainer1.Size = New System.Drawing.Size(735, 398)
+        Me.SplitContainer1.SplitterDistance = 281
         Me.SplitContainer1.TabIndex = 0
         '
         'btnAddRow
@@ -1043,7 +900,7 @@ Partial Class Main
         Me.dgvMeasuredData.ContextMenuStrip = Me.ContextMenuStrip1
         Me.dgvMeasuredData.Location = New System.Drawing.Point(6, 27)
         Me.dgvMeasuredData.Name = "dgvMeasuredData"
-        Me.dgvMeasuredData.Size = New System.Drawing.Size(351, 405)
+        Me.dgvMeasuredData.Size = New System.Drawing.Size(272, 368)
         Me.dgvMeasuredData.TabIndex = 1
         '
         'ContextMenuStrip1
@@ -1087,7 +944,7 @@ Partial Class Main
         Me.dgvCalculatedData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvCalculatedData.Location = New System.Drawing.Point(6, 27)
         Me.dgvCalculatedData.Name = "dgvCalculatedData"
-        Me.dgvCalculatedData.Size = New System.Drawing.Size(566, 405)
+        Me.dgvCalculatedData.Size = New System.Drawing.Size(441, 368)
         Me.dgvCalculatedData.TabIndex = 1
         '
         'Label2
@@ -1105,7 +962,7 @@ Partial Class Main
         Me.TabPage3.Controls.Add(Me.GroupBox1)
         Me.TabPage3.Location = New System.Drawing.Point(4, 22)
         Me.TabPage3.Name = "TabPage3"
-        Me.TabPage3.Size = New System.Drawing.Size(970, 452)
+        Me.TabPage3.Size = New System.Drawing.Size(747, 445)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Calculations"
         Me.TabPage3.UseVisualStyleBackColor = True
@@ -1396,7 +1253,7 @@ Partial Class Main
         Me.TabPage5.Controls.Add(Me.SplitContainer2)
         Me.TabPage5.Location = New System.Drawing.Point(4, 22)
         Me.TabPage5.Name = "TabPage5"
-        Me.TabPage5.Size = New System.Drawing.Size(970, 452)
+        Me.TabPage5.Size = New System.Drawing.Size(747, 445)
         Me.TabPage5.TabIndex = 4
         Me.TabPage5.Text = "Well Path Display"
         Me.TabPage5.UseVisualStyleBackColor = True
@@ -1417,8 +1274,8 @@ Partial Class Main
         'SplitContainer2.Panel2
         '
         Me.SplitContainer2.Panel2.Controls.Add(Me.Chart3)
-        Me.SplitContainer2.Size = New System.Drawing.Size(964, 446)
-        Me.SplitContainer2.SplitterDistance = 629
+        Me.SplitContainer2.Size = New System.Drawing.Size(741, 404)
+        Me.SplitContainer2.SplitterDistance = 483
         Me.SplitContainer2.TabIndex = 0
         '
         'SplitContainer3
@@ -1437,8 +1294,8 @@ Partial Class Main
         'SplitContainer3.Panel2
         '
         Me.SplitContainer3.Panel2.Controls.Add(Me.Chart2)
-        Me.SplitContainer3.Size = New System.Drawing.Size(621, 438)
-        Me.SplitContainer3.SplitterDistance = 336
+        Me.SplitContainer3.Size = New System.Drawing.Size(475, 396)
+        Me.SplitContainer3.SplitterDistance = 257
         Me.SplitContainer3.TabIndex = 0
         '
         'Chart1
@@ -1446,17 +1303,17 @@ Partial Class Main
         Me.Chart1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        ChartArea4.Name = "ChartArea1"
-        Me.Chart1.ChartAreas.Add(ChartArea4)
-        Legend4.Name = "Legend1"
-        Me.Chart1.Legends.Add(Legend4)
+        ChartArea1.Name = "ChartArea1"
+        Me.Chart1.ChartAreas.Add(ChartArea1)
+        Legend1.Name = "Legend1"
+        Me.Chart1.Legends.Add(Legend1)
         Me.Chart1.Location = New System.Drawing.Point(3, 3)
         Me.Chart1.Name = "Chart1"
-        Series4.ChartArea = "ChartArea1"
-        Series4.Legend = "Legend1"
-        Series4.Name = "Series1"
-        Me.Chart1.Series.Add(Series4)
-        Me.Chart1.Size = New System.Drawing.Size(328, 430)
+        Series1.ChartArea = "ChartArea1"
+        Series1.Legend = "Legend1"
+        Series1.Name = "Series1"
+        Me.Chart1.Series.Add(Series1)
+        Me.Chart1.Size = New System.Drawing.Size(249, 388)
         Me.Chart1.TabIndex = 0
         Me.Chart1.Text = "Chart1"
         '
@@ -1465,17 +1322,17 @@ Partial Class Main
         Me.Chart2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        ChartArea5.Name = "ChartArea1"
-        Me.Chart2.ChartAreas.Add(ChartArea5)
-        Legend5.Name = "Legend1"
-        Me.Chart2.Legends.Add(Legend5)
+        ChartArea2.Name = "ChartArea1"
+        Me.Chart2.ChartAreas.Add(ChartArea2)
+        Legend2.Name = "Legend1"
+        Me.Chart2.Legends.Add(Legend2)
         Me.Chart2.Location = New System.Drawing.Point(3, 3)
         Me.Chart2.Name = "Chart2"
-        Series5.ChartArea = "ChartArea1"
-        Series5.Legend = "Legend1"
-        Series5.Name = "Series1"
-        Me.Chart2.Series.Add(Series5)
-        Me.Chart2.Size = New System.Drawing.Size(273, 430)
+        Series2.ChartArea = "ChartArea1"
+        Series2.Legend = "Legend1"
+        Series2.Name = "Series1"
+        Me.Chart2.Series.Add(Series2)
+        Me.Chart2.Size = New System.Drawing.Size(206, 388)
         Me.Chart2.TabIndex = 0
         Me.Chart2.Text = "Chart2"
         '
@@ -1484,19 +1341,421 @@ Partial Class Main
         Me.Chart3.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        ChartArea6.Name = "ChartArea1"
-        Me.Chart3.ChartAreas.Add(ChartArea6)
-        Legend6.Name = "Legend1"
-        Me.Chart3.Legends.Add(Legend6)
+        ChartArea3.Name = "ChartArea1"
+        Me.Chart3.ChartAreas.Add(ChartArea3)
+        Legend3.Name = "Legend1"
+        Me.Chart3.Legends.Add(Legend3)
         Me.Chart3.Location = New System.Drawing.Point(3, 3)
         Me.Chart3.Name = "Chart3"
-        Series6.ChartArea = "ChartArea1"
-        Series6.Legend = "Legend1"
-        Series6.Name = "Series1"
-        Me.Chart3.Series.Add(Series6)
-        Me.Chart3.Size = New System.Drawing.Size(323, 438)
+        Series3.ChartArea = "ChartArea1"
+        Series3.Legend = "Legend1"
+        Series3.Name = "Series1"
+        Me.Chart3.Series.Add(Series3)
+        Me.Chart3.Size = New System.Drawing.Size(246, 358)
         Me.Chart3.TabIndex = 0
         Me.Chart3.Text = "Chart3"
+        '
+        'TabPage1
+        '
+        Me.TabPage1.Controls.Add(Me.chkConnect)
+        Me.TabPage1.Controls.Add(Me.btnOpenProject)
+        Me.TabPage1.Controls.Add(Me.Label57)
+        Me.TabPage1.Controls.Add(Me.txtProjectPath)
+        Me.TabPage1.Controls.Add(Me.Label8)
+        Me.TabPage1.Controls.Add(Me.txtAppNetName)
+        Me.TabPage1.Controls.Add(Me.btnOpenAppDir)
+        Me.TabPage1.Controls.Add(Me.btnOpenSystem)
+        Me.TabPage1.Controls.Add(Me.btnOpenData)
+        Me.TabPage1.Controls.Add(Me.btnOpenSettings)
+        Me.TabPage1.Controls.Add(Me.btnAdd)
+        Me.TabPage1.Controls.Add(Me.txtParentProject)
+        Me.TabPage1.Controls.Add(Me.Label6)
+        Me.TabPage1.Controls.Add(Me.btnParameters)
+        Me.TabPage1.Controls.Add(Me.Label79)
+        Me.TabPage1.Controls.Add(Me.txtSystemLocationType)
+        Me.TabPage1.Controls.Add(Me.txtSystemPath)
+        Me.TabPage1.Controls.Add(Me.Label52)
+        Me.TabPage1.Controls.Add(Me.txtCurrentDuration)
+        Me.TabPage1.Controls.Add(Me.Label53)
+        Me.TabPage1.Controls.Add(Me.Label54)
+        Me.TabPage1.Controls.Add(Me.txtTotalDuration)
+        Me.TabPage1.Controls.Add(Me.Label55)
+        Me.TabPage1.Controls.Add(Me.Label56)
+        Me.TabPage1.Controls.Add(Me.txtLastUsed)
+        Me.TabPage1.Controls.Add(Me.Label11)
+        Me.TabPage1.Controls.Add(Me.txtCreationDate)
+        Me.TabPage1.Controls.Add(Me.Label10)
+        Me.TabPage1.Controls.Add(Me.txtDataPath)
+        Me.TabPage1.Controls.Add(Me.txtDataLocationType)
+        Me.TabPage1.Controls.Add(Me.Label9)
+        Me.TabPage1.Controls.Add(Me.txtSettingsPath)
+        Me.TabPage1.Controls.Add(Me.Label7)
+        Me.TabPage1.Controls.Add(Me.txtSettingsLocationType)
+        Me.TabPage1.Controls.Add(Me.txtProjectType)
+        Me.TabPage1.Controls.Add(Me.txtProjectDescription)
+        Me.TabPage1.Controls.Add(Me.Label4)
+        Me.TabPage1.Controls.Add(Me.txtProjectName)
+        Me.TabPage1.Controls.Add(Me.Label3)
+        Me.TabPage1.Controls.Add(Me.btnProject)
+        Me.TabPage1.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage1.Name = "TabPage1"
+        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage1.Size = New System.Drawing.Size(747, 445)
+        Me.TabPage1.TabIndex = 0
+        Me.TabPage1.Text = "Project Information"
+        Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'chkConnect
+        '
+        Me.chkConnect.AutoSize = True
+        Me.chkConnect.Location = New System.Drawing.Point(431, 138)
+        Me.chkConnect.Name = "chkConnect"
+        Me.chkConnect.Size = New System.Drawing.Size(112, 17)
+        Me.chkConnect.TabIndex = 305
+        Me.chkConnect.Text = "Connect On Open"
+        Me.chkConnect.UseVisualStyleBackColor = True
+        '
+        'btnOpenProject
+        '
+        Me.btnOpenProject.Location = New System.Drawing.Point(84, 181)
+        Me.btnOpenProject.Name = "btnOpenProject"
+        Me.btnOpenProject.Size = New System.Drawing.Size(48, 22)
+        Me.btnOpenProject.TabIndex = 304
+        Me.btnOpenProject.Text = "Open"
+        Me.btnOpenProject.UseVisualStyleBackColor = True
+        '
+        'Label57
+        '
+        Me.Label57.AutoSize = True
+        Me.Label57.Location = New System.Drawing.Point(6, 165)
+        Me.Label57.Name = "Label57"
+        Me.Label57.Size = New System.Drawing.Size(67, 13)
+        Me.Label57.TabIndex = 303
+        Me.Label57.Text = "Project path:"
+        '
+        'txtProjectPath
+        '
+        Me.txtProjectPath.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtProjectPath.Location = New System.Drawing.Point(138, 162)
+        Me.txtProjectPath.Multiline = True
+        Me.txtProjectPath.Name = "txtProjectPath"
+        Me.txtProjectPath.Size = New System.Drawing.Size(606, 46)
+        Me.txtProjectPath.TabIndex = 302
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(162, 37)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(103, 13)
+        Me.Label8.TabIndex = 301
+        Me.Label8.Text = "Application network:"
+        '
+        'txtAppNetName
+        '
+        Me.txtAppNetName.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtAppNetName.Location = New System.Drawing.Point(271, 34)
+        Me.txtAppNetName.Name = "txtAppNetName"
+        Me.txtAppNetName.Size = New System.Drawing.Size(470, 20)
+        Me.txtAppNetName.TabIndex = 300
+        Me.ToolTip1.SetToolTip(Me.txtAppNetName, "The name of the Application Network containing the project")
+        '
+        'btnOpenAppDir
+        '
+        Me.btnOpenAppDir.Location = New System.Drawing.Point(6, 370)
+        Me.btnOpenAppDir.Name = "btnOpenAppDir"
+        Me.btnOpenAppDir.Size = New System.Drawing.Size(150, 22)
+        Me.btnOpenAppDir.TabIndex = 298
+        Me.btnOpenAppDir.Text = "Open Application Directory"
+        Me.btnOpenAppDir.UseVisualStyleBackColor = True
+        '
+        'btnOpenSystem
+        '
+        Me.btnOpenSystem.Location = New System.Drawing.Point(84, 337)
+        Me.btnOpenSystem.Name = "btnOpenSystem"
+        Me.btnOpenSystem.Size = New System.Drawing.Size(48, 22)
+        Me.btnOpenSystem.TabIndex = 295
+        Me.btnOpenSystem.Text = "Open"
+        Me.btnOpenSystem.UseVisualStyleBackColor = True
+        '
+        'btnOpenData
+        '
+        Me.btnOpenData.Location = New System.Drawing.Point(84, 285)
+        Me.btnOpenData.Name = "btnOpenData"
+        Me.btnOpenData.Size = New System.Drawing.Size(48, 22)
+        Me.btnOpenData.TabIndex = 294
+        Me.btnOpenData.Text = "Open"
+        Me.btnOpenData.UseVisualStyleBackColor = True
+        '
+        'btnOpenSettings
+        '
+        Me.btnOpenSettings.Location = New System.Drawing.Point(84, 233)
+        Me.btnOpenSettings.Name = "btnOpenSettings"
+        Me.btnOpenSettings.Size = New System.Drawing.Size(48, 22)
+        Me.btnOpenSettings.TabIndex = 293
+        Me.btnOpenSettings.Text = "Open"
+        Me.btnOpenSettings.UseVisualStyleBackColor = True
+        '
+        'btnAdd
+        '
+        Me.btnAdd.Location = New System.Drawing.Point(9, 34)
+        Me.btnAdd.Name = "btnAdd"
+        Me.btnAdd.Size = New System.Drawing.Size(147, 22)
+        Me.btnAdd.TabIndex = 289
+        Me.btnAdd.Text = "Add to Message Service"
+        Me.ToolTip1.SetToolTip(Me.btnAdd, "Add selected project to the Message Service list")
+        Me.btnAdd.UseVisualStyleBackColor = True
+        '
+        'txtParentProject
+        '
+        Me.txtParentProject.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtParentProject.Location = New System.Drawing.Point(271, 8)
+        Me.txtParentProject.Name = "txtParentProject"
+        Me.txtParentProject.Size = New System.Drawing.Size(470, 20)
+        Me.txtParentProject.TabIndex = 287
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(166, 11)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(76, 13)
+        Me.Label6.TabIndex = 286
+        Me.Label6.Text = "Parent project:"
+        '
+        'btnParameters
+        '
+        Me.btnParameters.Location = New System.Drawing.Point(84, 6)
+        Me.btnParameters.Name = "btnParameters"
+        Me.btnParameters.Size = New System.Drawing.Size(72, 22)
+        Me.btnParameters.TabIndex = 285
+        Me.btnParameters.Text = "Parameters"
+        Me.btnParameters.UseVisualStyleBackColor = True
+        '
+        'Label79
+        '
+        Me.Label79.AutoSize = True
+        Me.Label79.Location = New System.Drawing.Point(6, 321)
+        Me.Label79.Name = "Label79"
+        Me.Label79.Size = New System.Drawing.Size(108, 13)
+        Me.Label79.TabIndex = 90
+        Me.Label79.Text = "System location path:"
+        '
+        'txtSystemLocationType
+        '
+        Me.txtSystemLocationType.Location = New System.Drawing.Point(6, 337)
+        Me.txtSystemLocationType.Name = "txtSystemLocationType"
+        Me.txtSystemLocationType.Size = New System.Drawing.Size(72, 20)
+        Me.txtSystemLocationType.TabIndex = 89
+        '
+        'txtSystemPath
+        '
+        Me.txtSystemPath.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtSystemPath.Location = New System.Drawing.Point(138, 318)
+        Me.txtSystemPath.Multiline = True
+        Me.txtSystemPath.Name = "txtSystemPath"
+        Me.txtSystemPath.Size = New System.Drawing.Size(603, 46)
+        Me.txtSystemPath.TabIndex = 88
+        '
+        'Label52
+        '
+        Me.Label52.AutoSize = True
+        Me.Label52.Location = New System.Drawing.Point(562, 373)
+        Me.Label52.Name = "Label52"
+        Me.Label52.Size = New System.Drawing.Size(41, 13)
+        Me.Label52.TabIndex = 79
+        Me.Label52.Text = "d:h:m:s"
+        '
+        'txtCurrentDuration
+        '
+        Me.txtCurrentDuration.Location = New System.Drawing.Point(471, 370)
+        Me.txtCurrentDuration.Name = "txtCurrentDuration"
+        Me.txtCurrentDuration.Size = New System.Drawing.Size(85, 20)
+        Me.txtCurrentDuration.TabIndex = 78
+        '
+        'Label53
+        '
+        Me.Label53.AutoSize = True
+        Me.Label53.Location = New System.Drawing.Point(374, 373)
+        Me.Label53.Name = "Label53"
+        Me.Label53.Size = New System.Drawing.Size(41, 13)
+        Me.Label53.TabIndex = 77
+        Me.Label53.Text = "d:h:m:s"
+        '
+        'Label54
+        '
+        Me.Label54.AutoSize = True
+        Me.Label54.Location = New System.Drawing.Point(421, 373)
+        Me.Label54.Name = "Label54"
+        Me.Label54.Size = New System.Drawing.Size(44, 13)
+        Me.Label54.TabIndex = 76
+        Me.Label54.Text = "Current:"
+        '
+        'txtTotalDuration
+        '
+        Me.txtTotalDuration.Location = New System.Drawing.Point(283, 370)
+        Me.txtTotalDuration.Name = "txtTotalDuration"
+        Me.txtTotalDuration.Size = New System.Drawing.Size(85, 20)
+        Me.txtTotalDuration.TabIndex = 75
+        '
+        'Label55
+        '
+        Me.Label55.AutoSize = True
+        Me.Label55.Location = New System.Drawing.Point(243, 373)
+        Me.Label55.Name = "Label55"
+        Me.Label55.Size = New System.Drawing.Size(34, 13)
+        Me.Label55.TabIndex = 74
+        Me.Label55.Text = "Total:"
+        '
+        'Label56
+        '
+        Me.Label56.AutoSize = True
+        Me.Label56.Location = New System.Drawing.Point(162, 375)
+        Me.Label56.Name = "Label56"
+        Me.Label56.Size = New System.Drawing.Size(75, 13)
+        Me.Label56.TabIndex = 73
+        Me.Label56.Text = "Project usage:"
+        '
+        'txtLastUsed
+        '
+        Me.txtLastUsed.Location = New System.Drawing.Point(295, 136)
+        Me.txtLastUsed.Name = "txtLastUsed"
+        Me.txtLastUsed.Size = New System.Drawing.Size(120, 20)
+        Me.txtLastUsed.TabIndex = 65
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(211, 139)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(78, 13)
+        Me.Label11.TabIndex = 64
+        Me.Label11.Text = "Date last used:"
+        '
+        'txtCreationDate
+        '
+        Me.txtCreationDate.Location = New System.Drawing.Point(85, 136)
+        Me.txtCreationDate.Name = "txtCreationDate"
+        Me.txtCreationDate.Size = New System.Drawing.Size(120, 20)
+        Me.txtCreationDate.TabIndex = 63
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(6, 139)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(73, 13)
+        Me.Label10.TabIndex = 62
+        Me.Label10.Text = "Creation date:"
+        '
+        'txtDataPath
+        '
+        Me.txtDataPath.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtDataPath.Location = New System.Drawing.Point(138, 266)
+        Me.txtDataPath.Multiline = True
+        Me.txtDataPath.Name = "txtDataPath"
+        Me.txtDataPath.Size = New System.Drawing.Size(603, 46)
+        Me.txtDataPath.TabIndex = 61
+        '
+        'txtDataLocationType
+        '
+        Me.txtDataLocationType.Location = New System.Drawing.Point(6, 285)
+        Me.txtDataLocationType.Name = "txtDataLocationType"
+        Me.txtDataLocationType.Size = New System.Drawing.Size(72, 20)
+        Me.txtDataLocationType.TabIndex = 60
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(6, 269)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(97, 13)
+        Me.Label9.TabIndex = 59
+        Me.Label9.Text = "Data location path:"
+        '
+        'txtSettingsPath
+        '
+        Me.txtSettingsPath.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtSettingsPath.Location = New System.Drawing.Point(138, 214)
+        Me.txtSettingsPath.Multiline = True
+        Me.txtSettingsPath.Name = "txtSettingsPath"
+        Me.txtSettingsPath.Size = New System.Drawing.Size(603, 46)
+        Me.txtSettingsPath.TabIndex = 57
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(6, 217)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(112, 13)
+        Me.Label7.TabIndex = 56
+        Me.Label7.Text = "Settings location path:"
+        '
+        'txtSettingsLocationType
+        '
+        Me.txtSettingsLocationType.Location = New System.Drawing.Point(6, 233)
+        Me.txtSettingsLocationType.Name = "txtSettingsLocationType"
+        Me.txtSettingsLocationType.Size = New System.Drawing.Size(72, 20)
+        Me.txtSettingsLocationType.TabIndex = 55
+        '
+        'txtProjectType
+        '
+        Me.txtProjectType.Location = New System.Drawing.Point(6, 181)
+        Me.txtProjectType.Name = "txtProjectType"
+        Me.txtProjectType.Size = New System.Drawing.Size(72, 20)
+        Me.txtProjectType.TabIndex = 53
+        '
+        'txtProjectDescription
+        '
+        Me.txtProjectDescription.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtProjectDescription.Location = New System.Drawing.Point(85, 90)
+        Me.txtProjectDescription.Multiline = True
+        Me.txtProjectDescription.Name = "txtProjectDescription"
+        Me.txtProjectDescription.Size = New System.Drawing.Size(656, 40)
+        Me.txtProjectDescription.TabIndex = 51
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(6, 93)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(63, 13)
+        Me.Label4.TabIndex = 50
+        Me.Label4.Text = "Description:"
+        '
+        'txtProjectName
+        '
+        Me.txtProjectName.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtProjectName.Location = New System.Drawing.Point(85, 64)
+        Me.txtProjectName.Name = "txtProjectName"
+        Me.txtProjectName.Size = New System.Drawing.Size(656, 20)
+        Me.txtProjectName.TabIndex = 49
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(6, 67)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(38, 13)
+        Me.Label3.TabIndex = 48
+        Me.Label3.Text = "Name:"
+        '
+        'btnProject
+        '
+        Me.btnProject.Location = New System.Drawing.Point(6, 6)
+        Me.btnProject.Name = "btnProject"
+        Me.btnProject.Size = New System.Drawing.Size(72, 22)
+        Me.btnProject.TabIndex = 47
+        Me.btnProject.Text = "Project List"
+        Me.btnProject.UseVisualStyleBackColor = True
         '
         'Timer1
         '
@@ -1532,11 +1791,25 @@ Partial Class Main
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         '
+        'btnWebPages
+        '
+        Me.btnWebPages.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnWebPages.Location = New System.Drawing.Point(380, 12)
+        Me.btnWebPages.Name = "btnWebPages"
+        Me.btnWebPages.Size = New System.Drawing.Size(68, 22)
+        Me.btnWebPages.TabIndex = 280
+        Me.btnWebPages.Text = "Workflows"
+        Me.btnWebPages.UseVisualStyleBackColor = True
+        '
+        'Timer2
+        '
+        '
         'Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1002, 530)
+        Me.ClientSize = New System.Drawing.Size(779, 523)
+        Me.Controls.Add(Me.btnWebPages)
         Me.Controls.Add(Me.btnNew)
         Me.Controls.Add(Me.btnSave)
         Me.Controls.Add(Me.btnOpen)
@@ -1550,8 +1823,7 @@ Partial Class Main
         Me.Name = "Main"
         Me.Text = "Well Deviation V1-0"
         Me.TabControl1.ResumeLayout(False)
-        Me.TabPage1.ResumeLayout(False)
-        Me.TabPage1.PerformLayout()
+        Me.TabPage6.ResumeLayout(False)
         Me.TabPage4.ResumeLayout(False)
         Me.TabPage4.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
@@ -1590,6 +1862,8 @@ Partial Class Main
         CType(Me.Chart1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Chart2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Chart3, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage1.ResumeLayout(False)
+        Me.TabPage1.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1605,16 +1879,13 @@ Partial Class Main
     Friend WithEvents Label11 As Label
     Friend WithEvents txtCreationDate As TextBox
     Friend WithEvents Label10 As Label
-    Friend WithEvents txtDataLocationPath As TextBox
+    Friend WithEvents txtDataPath As TextBox
     Friend WithEvents txtDataLocationType As TextBox
     Friend WithEvents Label9 As Label
-    Friend WithEvents Label8 As Label
-    Friend WithEvents txtSettingsLocationPath As TextBox
+    Friend WithEvents txtSettingsPath As TextBox
     Friend WithEvents Label7 As Label
     Friend WithEvents txtSettingsLocationType As TextBox
-    Friend WithEvents Label6 As Label
     Friend WithEvents txtProjectType As TextBox
-    Friend WithEvents Label5 As Label
     Friend WithEvents txtProjectDescription As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents txtProjectName As TextBox
@@ -1731,4 +2002,34 @@ Partial Class Main
     Friend WithEvents txtInterpolateddX As TextBox
     Friend WithEvents Label49 As Label
     Friend WithEvents Label48 As Label
+    Friend WithEvents Label52 As Label
+    Friend WithEvents txtCurrentDuration As TextBox
+    Friend WithEvents Label53 As Label
+    Friend WithEvents Label54 As Label
+    Friend WithEvents txtTotalDuration As TextBox
+    Friend WithEvents Label55 As Label
+    Friend WithEvents Label56 As Label
+    Friend WithEvents TabPage6 As TabPage
+    Friend WithEvents WebBrowser1 As WebBrowser
+    Friend WithEvents Label79 As Label
+    Friend WithEvents txtSystemLocationType As TextBox
+    Friend WithEvents txtSystemPath As TextBox
+    Friend WithEvents btnWebPages As Button
+    Friend WithEvents btnOpenAppDir As Button
+    Friend WithEvents btnOpenSystem As Button
+    Friend WithEvents btnOpenData As Button
+    Friend WithEvents btnOpenSettings As Button
+    Friend WithEvents btnAdd As Button
+    Friend WithEvents txtParentProject As TextBox
+    Friend WithEvents Label6 As Label
+    Friend WithEvents btnParameters As Button
+    Friend WithEvents Timer2 As Timer
+    Friend WithEvents btnOpenProject As Button
+    Friend WithEvents Label57 As Label
+    Friend WithEvents txtProjectPath As TextBox
+    Friend WithEvents Label8 As Label
+    Friend WithEvents txtAppNetName As TextBox
+    Friend WithEvents ToolTip1 As ToolTip
+    Friend WithEvents chkConnect As CheckBox
+    Friend WithEvents Timer3 As Timer
 End Class
