@@ -173,7 +173,40 @@
             If Settings.<FormSettings>.<EastLongMin>.Value <> Nothing Then txtELongMinutes.Text = Settings.<FormSettings>.<EastLongMin>.Value
             If Settings.<FormSettings>.<EastLongSec>.Value <> Nothing Then txtELongSeconds.Text = Settings.<FormSettings>.<EastLongSec>.Value
             If Settings.<FormSettings>.<EastLongNS>.Value <> Nothing Then cmbELongWE.SelectedIndex = cmbELongWE.FindStringExact(Settings.<FormSettings>.<EastLongNS>.Value)
+            CheckFormPos()
+        End If
+    End Sub
 
+    Private Sub CheckFormPos()
+        'Chech that the form can be seen on a screen.
+
+        Dim MinWidthVisible As Integer = 192 'Minimum number of X pixels visible. The form will be moved if this many form pixels are not visible.
+        Dim MinHeightVisible As Integer = 64 'Minimum number of Y pixels visible. The form will be moved if this many form pixels are not visible.
+
+        Dim FormRect As New Rectangle(Me.Left, Me.Top, Me.Width, Me.Height)
+        Dim WARect As Rectangle = Screen.GetWorkingArea(FormRect) 'The Working Area rectangle - the usable area of the screen containing the form.
+
+        ''Check if the top of the form is less than zero:
+        'If Me.Top < 0 Then Me.Top = 0
+
+        'Check if the top of the form is above the top of the Working Area:
+        If Me.Top < WARect.Top Then
+            Me.Top = WARect.Top
+        End If
+
+        'Check if the top of the form is too close to the bottom of the Working Area:
+        If (Me.Top + MinHeightVisible) > (WARect.Top + WARect.Height) Then
+            Me.Top = WARect.Top + WARect.Height - MinHeightVisible
+        End If
+
+        'Check if the left edge of the form is too close to the right edge of the Working Area:
+        If (Me.Left + MinWidthVisible) > (WARect.Left + WARect.Width) Then
+            Me.Left = WARect.Left + WARect.Width - MinWidthVisible
+        End If
+
+        'Check if the right edge of the form is too close to the left edge of the Working Area:
+        If (Me.Left + Me.Width - MinWidthVisible) < WARect.Left Then
+            Me.Left = WARect.Left - Me.Width + MinWidthVisible
         End If
     End Sub
 
@@ -308,8 +341,10 @@
         Dim xmessage As New XElement("XMsg") 'This indicates the start of the message in the XMessage class
 
         'ADDED 3Feb19:
-        Dim clientAppNetName As New XElement("ClientAppNetName", Main.AppNetName)
-        xmessage.Add(clientAppNetName)
+        'Dim clientAppNetName As New XElement("ClientAppNetName", Main.AppNetName)
+        'xmessage.Add(clientAppNetName)
+        Dim clientProNetName As New XElement("ClientProNetName", Main.ProNetName)
+        xmessage.Add(clientProNetName)
 
         Dim clientName As New XElement("ClientName", Main.ApplicationInfo.Name) 'This tells the coordinate server the name of the client making the request.
         xmessage.Add(clientName)
@@ -402,13 +437,15 @@
                 Main.Message.Add("client state is faulted. Message not sent!" & vbCrLf)
             Else
                 'Main.client.SendMessageAsync("ADVL_Coordinates_1", doc.ToString)
-                Main.client.SendMessageAsync(Main.AppNetName, "ADVL_Coordinates_1", doc.ToString)
+                'Main.client.SendMessageAsync(Main.AppNetName, "ADVL_Coordinates_1", doc.ToString)
+                Main.client.SendMessageAsync(Main.ProNetName, "ADVL_Coordinates_1", doc.ToString)
                 'Main.Message.Color = Color.Red
                 'Main.Message.FontStyle = FontStyle.Bold
                 'Main.Message.XAdd("Message sent to " & "ADVL_Coordinates_1" & ":" & vbCrLf)
                 'Main.Message.SetNormalStyle()
                 'Main.Message.XAdd(doc.ToString & vbCrLf & vbCrLf)
-                Main.Message.XAddText("Message sent to " & "ADVL_Coordinates_1" & ":" & vbCrLf, "XmlSentNotice")
+                'Main.Message.XAddText("Message sent to " & "ADVL_Coordinates_1" & ":" & vbCrLf, "XmlSentNotice")
+                Main.Message.XAddText("Message sent to [" & Main.ProNetName & "]." & "ADVL_Coordinates_1" & ":" & vbCrLf, "XmlSentNotice")
                 Main.Message.XAddXml(doc.ToString)
                 Main.Message.XAddText(vbCrLf, "Normal") 'Add extra line
             End If
@@ -600,8 +637,10 @@
         'xmessage.Add(clientName)
 
         'ADDED 3Feb19:
-        Dim clientAppNetName As New XElement("ClientAppNetName", Main.AppNetName)
-        xmessage.Add(clientAppNetName)
+        'Dim clientAppNetName As New XElement("ClientAppNetName", Main.AppNetName)
+        'xmessage.Add(clientAppNetName)
+        Dim clientProNetName As New XElement("ClientProNetName", Main.ProNetName)
+        xmessage.Add(clientProNetName)
 
         Dim clientConnName As New XElement("ClientConnectionName", Main.ConnectionName) 'This tells the coordinate server the name of the client making the request.
         xmessage.Add(clientConnName)
@@ -680,8 +719,10 @@
             Else
                 Main.cmbGeoCRS.Items.Clear()
                 'Main.client.SendMessageAsync("ADVL_Coordinates_1", doc.ToString)
-                Main.client.SendMessageAsync(Main.AppNetName, "ADVL_Coordinates_1", doc.ToString)
-                Main.Message.XAddText("Message sent to " & "ADVL_Coordinates_1" & ":" & vbCrLf, "XmlSentNotice")
+                'Main.client.SendMessageAsync(Main.AppNetName, "ADVL_Coordinates_1", doc.ToString)
+                Main.client.SendMessageAsync(Main.ProNetName, "ADVL_Coordinates_1", doc.ToString)
+                'Main.Message.XAddText("Message sent to " & "ADVL_Coordinates_1" & ":" & vbCrLf, "XmlSentNotice")
+                Main.Message.XAddText("Message sent to [" & Main.ProNetName & "]." & "ADVL_Coordinates_1" & ":" & vbCrLf, "XmlSentNotice")
                 Main.Message.XAddXml(doc.ToString)
                 Main.Message.XAddText(vbCrLf, "Normal") 'Add extra line
             End If
@@ -700,8 +741,10 @@
         'xmessage.Add(clientName)
 
         'ADDED 3Feb19:
-        Dim clientAppNetName As New XElement("ClientAppNetName", Main.AppNetName)
-        xmessage.Add(clientAppNetName)
+        'Dim clientAppNetName As New XElement("ClientAppNetName", Main.AppNetName)
+        'xmessage.Add(clientAppNetName)
+        Dim clientProjectNetName As New XElement("ClientProNetName", Main.ProNetName)
+        xmessage.Add(clientProjectNetName)
 
         Dim clientConnName As New XElement("ClientConnectionName", Main.ConnectionName) 'This tells the coordinate server the name of the client making the request.
         xmessage.Add(clientConnName)
@@ -752,8 +795,11 @@
             Else
                 Main.cmbProjCRS.Items.Clear()
                 'Main.client.SendMessageAsync("ADVL_Coordinates_1", doc.ToString)
-                Main.client.SendMessageAsync(Main.AppNetName, "ADVL_Coordinates_1", doc.ToString)
-                Main.Message.XAddText("Message sent to " & "ADVL_Coordinates_1" & ":" & vbCrLf, "XmlSentNotice")
+                'Main.client.SendMessageAsync(Main.AppNetName, "ADVL_Coordinates_1", doc.ToString)
+                Main.client.SendMessageAsync(Main.ProNetName, "ADVL_Coordinates_1", doc.ToString)
+                'Main.Message.XAddText("Message sent to " & "ADVL_Coordinates_1" & ":" & vbCrLf, "XmlSentNotice")
+                Main.Message.XAddText("Message sent to [" & Main.ProNetName & "]." & "ADVL_Coordinates_1" & ":" & vbCrLf, "XmlSentNotice")
+
                 Main.Message.XAddXml(doc.ToString)
                 Main.Message.XAddText(vbCrLf, "Normal") 'Add extra line
             End If

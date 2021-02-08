@@ -152,7 +152,7 @@ Partial Class Main
         Me.Label57 = New System.Windows.Forms.Label()
         Me.txtProjectPath = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.txtAppNetName = New System.Windows.Forms.TextBox()
+        Me.txtProNetName = New System.Windows.Forms.TextBox()
         Me.btnOpenAppDir = New System.Windows.Forms.Button()
         Me.btnOpenSystem = New System.Windows.Forms.Button()
         Me.btnOpenData = New System.Windows.Forms.Button()
@@ -187,15 +187,16 @@ Partial Class Main
         Me.txtProjectName = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.btnProject = New System.Windows.Forms.Button()
-        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.btnOpen = New System.Windows.Forms.Button()
         Me.btnSave = New System.Windows.Forms.Button()
         Me.btnNew = New System.Windows.Forms.Button()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.btnWebPages = New System.Windows.Forms.Button()
+        Me.ContextMenuStrip2 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.ToolStripMenuItem1_EditWorkflowTabPage = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem1_ShowStartPageInWorkflowTab = New System.Windows.Forms.ToolStripMenuItem()
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.Timer3 = New System.Windows.Forms.Timer(Me.components)
         Me.TabControl1.SuspendLayout()
         Me.TabPage6.SuspendLayout()
         Me.TabPage4.SuspendLayout()
@@ -228,12 +229,13 @@ Partial Class Main
         CType(Me.Chart2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Chart3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage1.SuspendLayout()
+        Me.ContextMenuStrip2.SuspendLayout()
         Me.SuspendLayout()
         '
         'btnExit
         '
         Me.btnExit.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnExit.Location = New System.Drawing.Point(703, 12)
+        Me.btnExit.Location = New System.Drawing.Point(779, 12)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(64, 22)
         Me.btnExit.TabIndex = 8
@@ -245,7 +247,7 @@ Partial Class Main
         Me.btnOnline.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnOnline.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnOnline.ForeColor = System.Drawing.Color.Red
-        Me.btnOnline.Location = New System.Drawing.Point(641, 12)
+        Me.btnOnline.Location = New System.Drawing.Point(717, 12)
         Me.btnOnline.Name = "btnOnline"
         Me.btnOnline.Size = New System.Drawing.Size(56, 22)
         Me.btnOnline.TabIndex = 37
@@ -255,7 +257,7 @@ Partial Class Main
         'btnMessages
         '
         Me.btnMessages.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnMessages.Location = New System.Drawing.Point(563, 12)
+        Me.btnMessages.Location = New System.Drawing.Point(639, 12)
         Me.btnMessages.Name = "btnMessages"
         Me.btnMessages.Size = New System.Drawing.Size(72, 22)
         Me.btnMessages.TabIndex = 38
@@ -265,7 +267,7 @@ Partial Class Main
         'btnAppInfo
         '
         Me.btnAppInfo.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnAppInfo.Location = New System.Drawing.Point(462, 12)
+        Me.btnAppInfo.Location = New System.Drawing.Point(538, 12)
         Me.btnAppInfo.Name = "btnAppInfo"
         Me.btnAppInfo.Size = New System.Drawing.Size(95, 22)
         Me.btnAppInfo.TabIndex = 46
@@ -297,7 +299,7 @@ Partial Class Main
         Me.TabControl1.Location = New System.Drawing.Point(12, 40)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(755, 471)
+        Me.TabControl1.Size = New System.Drawing.Size(831, 479)
         Me.TabControl1.TabIndex = 51
         '
         'TabPage6
@@ -305,7 +307,7 @@ Partial Class Main
         Me.TabPage6.Controls.Add(Me.WebBrowser1)
         Me.TabPage6.Location = New System.Drawing.Point(4, 22)
         Me.TabPage6.Name = "TabPage6"
-        Me.TabPage6.Size = New System.Drawing.Size(747, 445)
+        Me.TabPage6.Size = New System.Drawing.Size(823, 453)
         Me.TabPage6.TabIndex = 5
         Me.TabPage6.Text = "Workflow"
         Me.TabPage6.UseVisualStyleBackColor = True
@@ -318,7 +320,7 @@ Partial Class Main
         Me.WebBrowser1.Location = New System.Drawing.Point(3, 3)
         Me.WebBrowser1.MinimumSize = New System.Drawing.Size(20, 20)
         Me.WebBrowser1.Name = "WebBrowser1"
-        Me.WebBrowser1.Size = New System.Drawing.Size(741, 404)
+        Me.WebBrowser1.Size = New System.Drawing.Size(817, 447)
         Me.WebBrowser1.TabIndex = 69
         '
         'TabPage4
@@ -335,7 +337,7 @@ Partial Class Main
         Me.TabPage4.Controls.Add(Me.Label13)
         Me.TabPage4.Location = New System.Drawing.Point(4, 22)
         Me.TabPage4.Name = "TabPage4"
-        Me.TabPage4.Size = New System.Drawing.Size(747, 445)
+        Me.TabPage4.Size = New System.Drawing.Size(823, 453)
         Me.TabPage4.TabIndex = 3
         Me.TabPage4.Text = "Well Information"
         Me.TabPage4.UseVisualStyleBackColor = True
@@ -344,7 +346,7 @@ Partial Class Main
         '
         Me.txtFileName.Location = New System.Drawing.Point(90, 12)
         Me.txtFileName.Name = "txtFileName"
-        Me.txtFileName.Size = New System.Drawing.Size(478, 20)
+        Me.txtFileName.Size = New System.Drawing.Size(565, 20)
         Me.txtFileName.TabIndex = 9
         '
         'Label27
@@ -362,7 +364,7 @@ Partial Class Main
         Me.GroupBox3.Controls.Add(Me.GroupBox4)
         Me.GroupBox3.Location = New System.Drawing.Point(6, 297)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(654, 138)
+        Me.GroupBox3.Size = New System.Drawing.Size(649, 138)
         Me.GroupBox3.TabIndex = 7
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Units:"
@@ -557,7 +559,7 @@ Partial Class Main
         Me.GroupBox2.Controls.Add(Me.Label15)
         Me.GroupBox2.Location = New System.Drawing.Point(6, 116)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(654, 161)
+        Me.GroupBox2.Size = New System.Drawing.Size(649, 161)
         Me.GroupBox2.TabIndex = 4
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Surface Location"
@@ -819,7 +821,7 @@ Partial Class Main
         '
         Me.txtBoreholeName.Location = New System.Drawing.Point(90, 64)
         Me.txtBoreholeName.Name = "txtBoreholeName"
-        Me.txtBoreholeName.Size = New System.Drawing.Size(478, 20)
+        Me.txtBoreholeName.Size = New System.Drawing.Size(565, 20)
         Me.txtBoreholeName.TabIndex = 3
         '
         'Label14
@@ -835,7 +837,7 @@ Partial Class Main
         '
         Me.txtWellName.Location = New System.Drawing.Point(90, 38)
         Me.txtWellName.Name = "txtWellName"
-        Me.txtWellName.Size = New System.Drawing.Size(478, 20)
+        Me.txtWellName.Size = New System.Drawing.Size(565, 20)
         Me.txtWellName.TabIndex = 1
         '
         'Label13
@@ -853,7 +855,7 @@ Partial Class Main
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(747, 445)
+        Me.TabPage2.Size = New System.Drawing.Size(823, 445)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Deviation Data"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -876,8 +878,8 @@ Partial Class Main
         '
         Me.SplitContainer1.Panel2.Controls.Add(Me.dgvCalculatedData)
         Me.SplitContainer1.Panel2.Controls.Add(Me.Label2)
-        Me.SplitContainer1.Size = New System.Drawing.Size(735, 398)
-        Me.SplitContainer1.SplitterDistance = 281
+        Me.SplitContainer1.Size = New System.Drawing.Size(811, 433)
+        Me.SplitContainer1.SplitterDistance = 310
         Me.SplitContainer1.TabIndex = 0
         '
         'btnAddRow
@@ -900,7 +902,7 @@ Partial Class Main
         Me.dgvMeasuredData.ContextMenuStrip = Me.ContextMenuStrip1
         Me.dgvMeasuredData.Location = New System.Drawing.Point(6, 27)
         Me.dgvMeasuredData.Name = "dgvMeasuredData"
-        Me.dgvMeasuredData.Size = New System.Drawing.Size(272, 368)
+        Me.dgvMeasuredData.Size = New System.Drawing.Size(301, 403)
         Me.dgvMeasuredData.TabIndex = 1
         '
         'ContextMenuStrip1
@@ -944,7 +946,7 @@ Partial Class Main
         Me.dgvCalculatedData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvCalculatedData.Location = New System.Drawing.Point(6, 27)
         Me.dgvCalculatedData.Name = "dgvCalculatedData"
-        Me.dgvCalculatedData.Size = New System.Drawing.Size(441, 368)
+        Me.dgvCalculatedData.Size = New System.Drawing.Size(488, 403)
         Me.dgvCalculatedData.TabIndex = 1
         '
         'Label2
@@ -962,7 +964,7 @@ Partial Class Main
         Me.TabPage3.Controls.Add(Me.GroupBox1)
         Me.TabPage3.Location = New System.Drawing.Point(4, 22)
         Me.TabPage3.Name = "TabPage3"
-        Me.TabPage3.Size = New System.Drawing.Size(747, 445)
+        Me.TabPage3.Size = New System.Drawing.Size(823, 453)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Calculations"
         Me.TabPage3.UseVisualStyleBackColor = True
@@ -978,7 +980,7 @@ Partial Class Main
         Me.GroupBox6.Controls.Add(Me.Label36)
         Me.GroupBox6.Location = New System.Drawing.Point(3, 123)
         Me.GroupBox6.Name = "GroupBox6"
-        Me.GroupBox6.Size = New System.Drawing.Size(523, 289)
+        Me.GroupBox6.Size = New System.Drawing.Size(470, 289)
         Me.GroupBox6.TabIndex = 1
         Me.GroupBox6.TabStop = False
         Me.GroupBox6.Text = "Interpolation"
@@ -1253,7 +1255,7 @@ Partial Class Main
         Me.TabPage5.Controls.Add(Me.SplitContainer2)
         Me.TabPage5.Location = New System.Drawing.Point(4, 22)
         Me.TabPage5.Name = "TabPage5"
-        Me.TabPage5.Size = New System.Drawing.Size(747, 445)
+        Me.TabPage5.Size = New System.Drawing.Size(823, 453)
         Me.TabPage5.TabIndex = 4
         Me.TabPage5.Text = "Well Path Display"
         Me.TabPage5.UseVisualStyleBackColor = True
@@ -1274,8 +1276,8 @@ Partial Class Main
         'SplitContainer2.Panel2
         '
         Me.SplitContainer2.Panel2.Controls.Add(Me.Chart3)
-        Me.SplitContainer2.Size = New System.Drawing.Size(741, 404)
-        Me.SplitContainer2.SplitterDistance = 483
+        Me.SplitContainer2.Size = New System.Drawing.Size(817, 447)
+        Me.SplitContainer2.SplitterDistance = 532
         Me.SplitContainer2.TabIndex = 0
         '
         'SplitContainer3
@@ -1294,8 +1296,8 @@ Partial Class Main
         'SplitContainer3.Panel2
         '
         Me.SplitContainer3.Panel2.Controls.Add(Me.Chart2)
-        Me.SplitContainer3.Size = New System.Drawing.Size(475, 396)
-        Me.SplitContainer3.SplitterDistance = 257
+        Me.SplitContainer3.Size = New System.Drawing.Size(524, 439)
+        Me.SplitContainer3.SplitterDistance = 283
         Me.SplitContainer3.TabIndex = 0
         '
         'Chart1
@@ -1313,7 +1315,7 @@ Partial Class Main
         Series1.Legend = "Legend1"
         Series1.Name = "Series1"
         Me.Chart1.Series.Add(Series1)
-        Me.Chart1.Size = New System.Drawing.Size(249, 388)
+        Me.Chart1.Size = New System.Drawing.Size(275, 431)
         Me.Chart1.TabIndex = 0
         Me.Chart1.Text = "Chart1"
         '
@@ -1332,7 +1334,7 @@ Partial Class Main
         Series2.Legend = "Legend1"
         Series2.Name = "Series1"
         Me.Chart2.Series.Add(Series2)
-        Me.Chart2.Size = New System.Drawing.Size(206, 388)
+        Me.Chart2.Size = New System.Drawing.Size(229, 431)
         Me.Chart2.TabIndex = 0
         Me.Chart2.Text = "Chart2"
         '
@@ -1351,7 +1353,7 @@ Partial Class Main
         Series3.Legend = "Legend1"
         Series3.Name = "Series1"
         Me.Chart3.Series.Add(Series3)
-        Me.Chart3.Size = New System.Drawing.Size(246, 358)
+        Me.Chart3.Size = New System.Drawing.Size(273, 439)
         Me.Chart3.TabIndex = 0
         Me.Chart3.Text = "Chart3"
         '
@@ -1362,7 +1364,7 @@ Partial Class Main
         Me.TabPage1.Controls.Add(Me.Label57)
         Me.TabPage1.Controls.Add(Me.txtProjectPath)
         Me.TabPage1.Controls.Add(Me.Label8)
-        Me.TabPage1.Controls.Add(Me.txtAppNetName)
+        Me.TabPage1.Controls.Add(Me.txtProNetName)
         Me.TabPage1.Controls.Add(Me.btnOpenAppDir)
         Me.TabPage1.Controls.Add(Me.btnOpenSystem)
         Me.TabPage1.Controls.Add(Me.btnOpenData)
@@ -1400,7 +1402,7 @@ Partial Class Main
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(747, 445)
+        Me.TabPage1.Size = New System.Drawing.Size(705, 445)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Project Information"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -1440,7 +1442,7 @@ Partial Class Main
         Me.txtProjectPath.Location = New System.Drawing.Point(138, 162)
         Me.txtProjectPath.Multiline = True
         Me.txtProjectPath.Name = "txtProjectPath"
-        Me.txtProjectPath.Size = New System.Drawing.Size(606, 46)
+        Me.txtProjectPath.Size = New System.Drawing.Size(561, 46)
         Me.txtProjectPath.TabIndex = 302
         '
         'Label8
@@ -1448,19 +1450,19 @@ Partial Class Main
         Me.Label8.AutoSize = True
         Me.Label8.Location = New System.Drawing.Point(162, 37)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(103, 13)
+        Me.Label8.Size = New System.Drawing.Size(84, 13)
         Me.Label8.TabIndex = 301
-        Me.Label8.Text = "Application network:"
+        Me.Label8.Text = "Project network:"
         '
-        'txtAppNetName
+        'txtProNetName
         '
-        Me.txtAppNetName.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.txtProNetName.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtAppNetName.Location = New System.Drawing.Point(271, 34)
-        Me.txtAppNetName.Name = "txtAppNetName"
-        Me.txtAppNetName.Size = New System.Drawing.Size(470, 20)
-        Me.txtAppNetName.TabIndex = 300
-        Me.ToolTip1.SetToolTip(Me.txtAppNetName, "The name of the Application Network containing the project")
+        Me.txtProNetName.Location = New System.Drawing.Point(271, 34)
+        Me.txtProNetName.Name = "txtProNetName"
+        Me.txtProNetName.Size = New System.Drawing.Size(428, 20)
+        Me.txtProNetName.TabIndex = 300
+        Me.ToolTip1.SetToolTip(Me.txtProNetName, "The name of the Application Network containing the project")
         '
         'btnOpenAppDir
         '
@@ -1514,7 +1516,7 @@ Partial Class Main
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtParentProject.Location = New System.Drawing.Point(271, 8)
         Me.txtParentProject.Name = "txtParentProject"
-        Me.txtParentProject.Size = New System.Drawing.Size(470, 20)
+        Me.txtParentProject.Size = New System.Drawing.Size(428, 20)
         Me.txtParentProject.TabIndex = 287
         '
         'Label6
@@ -1558,7 +1560,7 @@ Partial Class Main
         Me.txtSystemPath.Location = New System.Drawing.Point(138, 318)
         Me.txtSystemPath.Multiline = True
         Me.txtSystemPath.Name = "txtSystemPath"
-        Me.txtSystemPath.Size = New System.Drawing.Size(603, 46)
+        Me.txtSystemPath.Size = New System.Drawing.Size(561, 46)
         Me.txtSystemPath.TabIndex = 88
         '
         'Label52
@@ -1659,7 +1661,7 @@ Partial Class Main
         Me.txtDataPath.Location = New System.Drawing.Point(138, 266)
         Me.txtDataPath.Multiline = True
         Me.txtDataPath.Name = "txtDataPath"
-        Me.txtDataPath.Size = New System.Drawing.Size(603, 46)
+        Me.txtDataPath.Size = New System.Drawing.Size(561, 46)
         Me.txtDataPath.TabIndex = 61
         '
         'txtDataLocationType
@@ -1685,7 +1687,7 @@ Partial Class Main
         Me.txtSettingsPath.Location = New System.Drawing.Point(138, 214)
         Me.txtSettingsPath.Multiline = True
         Me.txtSettingsPath.Name = "txtSettingsPath"
-        Me.txtSettingsPath.Size = New System.Drawing.Size(603, 46)
+        Me.txtSettingsPath.Size = New System.Drawing.Size(561, 46)
         Me.txtSettingsPath.TabIndex = 57
         '
         'Label7
@@ -1718,7 +1720,7 @@ Partial Class Main
         Me.txtProjectDescription.Location = New System.Drawing.Point(85, 90)
         Me.txtProjectDescription.Multiline = True
         Me.txtProjectDescription.Name = "txtProjectDescription"
-        Me.txtProjectDescription.Size = New System.Drawing.Size(656, 40)
+        Me.txtProjectDescription.Size = New System.Drawing.Size(614, 40)
         Me.txtProjectDescription.TabIndex = 51
         '
         'Label4
@@ -1736,7 +1738,7 @@ Partial Class Main
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtProjectName.Location = New System.Drawing.Point(85, 64)
         Me.txtProjectName.Name = "txtProjectName"
-        Me.txtProjectName.Size = New System.Drawing.Size(656, 20)
+        Me.txtProjectName.Size = New System.Drawing.Size(614, 20)
         Me.txtProjectName.TabIndex = 49
         '
         'Label3
@@ -1756,9 +1758,6 @@ Partial Class Main
         Me.btnProject.TabIndex = 47
         Me.btnProject.Text = "Project List"
         Me.btnProject.UseVisualStyleBackColor = True
-        '
-        'Timer1
-        '
         '
         'btnOpen
         '
@@ -1794,12 +1793,31 @@ Partial Class Main
         'btnWebPages
         '
         Me.btnWebPages.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnWebPages.Location = New System.Drawing.Point(380, 12)
+        Me.btnWebPages.ContextMenuStrip = Me.ContextMenuStrip2
+        Me.btnWebPages.Location = New System.Drawing.Point(456, 12)
         Me.btnWebPages.Name = "btnWebPages"
         Me.btnWebPages.Size = New System.Drawing.Size(68, 22)
         Me.btnWebPages.TabIndex = 280
         Me.btnWebPages.Text = "Workflows"
         Me.btnWebPages.UseVisualStyleBackColor = True
+        '
+        'ContextMenuStrip2
+        '
+        Me.ContextMenuStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem1_EditWorkflowTabPage, Me.ToolStripMenuItem1_ShowStartPageInWorkflowTab})
+        Me.ContextMenuStrip2.Name = "ContextMenuStrip2"
+        Me.ContextMenuStrip2.Size = New System.Drawing.Size(248, 48)
+        '
+        'ToolStripMenuItem1_EditWorkflowTabPage
+        '
+        Me.ToolStripMenuItem1_EditWorkflowTabPage.Name = "ToolStripMenuItem1_EditWorkflowTabPage"
+        Me.ToolStripMenuItem1_EditWorkflowTabPage.Size = New System.Drawing.Size(247, 22)
+        Me.ToolStripMenuItem1_EditWorkflowTabPage.Text = "Edit Workflow Tab Page"
+        '
+        'ToolStripMenuItem1_ShowStartPageInWorkflowTab
+        '
+        Me.ToolStripMenuItem1_ShowStartPageInWorkflowTab.Name = "ToolStripMenuItem1_ShowStartPageInWorkflowTab"
+        Me.ToolStripMenuItem1_ShowStartPageInWorkflowTab.Size = New System.Drawing.Size(247, 22)
+        Me.ToolStripMenuItem1_ShowStartPageInWorkflowTab.Text = "Show Start Page In Workflow Tab"
         '
         'Timer2
         '
@@ -1808,7 +1826,7 @@ Partial Class Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(779, 523)
+        Me.ClientSize = New System.Drawing.Size(855, 531)
         Me.Controls.Add(Me.btnWebPages)
         Me.Controls.Add(Me.btnNew)
         Me.Controls.Add(Me.btnSave)
@@ -1864,6 +1882,7 @@ Partial Class Main
         CType(Me.Chart3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
+        Me.ContextMenuStrip2.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -1893,7 +1912,6 @@ Partial Class Main
     Friend WithEvents btnProject As Button
     Friend WithEvents TabPage2 As TabPage
     Friend WithEvents btnOpenTemplateForm As Button
-    Friend WithEvents Timer1 As Timer
     Friend WithEvents SplitContainer1 As SplitContainer
     Friend WithEvents dgvMeasuredData As DataGridView
     Friend WithEvents Label1 As Label
@@ -2028,8 +2046,10 @@ Partial Class Main
     Friend WithEvents Label57 As Label
     Friend WithEvents txtProjectPath As TextBox
     Friend WithEvents Label8 As Label
-    Friend WithEvents txtAppNetName As TextBox
+    Friend WithEvents txtProNetName As TextBox
     Friend WithEvents ToolTip1 As ToolTip
     Friend WithEvents chkConnect As CheckBox
-    Friend WithEvents Timer3 As Timer
+    Friend WithEvents ContextMenuStrip2 As ContextMenuStrip
+    Friend WithEvents ToolStripMenuItem1_EditWorkflowTabPage As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem1_ShowStartPageInWorkflowTab As ToolStripMenuItem
 End Class
