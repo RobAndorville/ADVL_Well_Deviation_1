@@ -73,7 +73,7 @@
     <GenerateManifests>true</GenerateManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <SignManifests>true</SignManifests>
+    <SignManifests>false</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>ADVL_WellDev_Icon1.ico</ApplicationIcon>
@@ -87,6 +87,8 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Windows.Forms" />
@@ -111,6 +113,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmArchive.Designer.vb">
+      <DependentUpon>frmArchive.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmArchive.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmGetCRSList.Designer.vb">
       <DependentUpon>frmGetCRSList.vb</DependentUpon>
     </Compile>
@@ -171,6 +179,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frmArchive.resx">
+      <DependentUpon>frmArchive.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmGetCRSList.resx">
       <DependentUpon>frmGetCRSList.vb</DependentUpon>
     </EmbeddedResource>

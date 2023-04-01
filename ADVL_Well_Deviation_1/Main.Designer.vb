@@ -147,6 +147,10 @@ Partial Class Main
         Me.Chart2 = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.Chart3 = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.btnOpenParentDir = New System.Windows.Forms.Button()
+        Me.btnOpenArchive = New System.Windows.Forms.Button()
+        Me.btnCreateArchive = New System.Windows.Forms.Button()
+        Me.btnShowProjectInfo = New System.Windows.Forms.Button()
         Me.chkConnect = New System.Windows.Forms.CheckBox()
         Me.btnOpenProject = New System.Windows.Forms.Button()
         Me.Label57 = New System.Windows.Forms.Label()
@@ -164,9 +168,7 @@ Partial Class Main
         Me.Label79 = New System.Windows.Forms.Label()
         Me.txtSystemLocationType = New System.Windows.Forms.TextBox()
         Me.txtSystemPath = New System.Windows.Forms.TextBox()
-        Me.Label52 = New System.Windows.Forms.Label()
         Me.txtCurrentDuration = New System.Windows.Forms.TextBox()
-        Me.Label53 = New System.Windows.Forms.Label()
         Me.Label54 = New System.Windows.Forms.Label()
         Me.txtTotalDuration = New System.Windows.Forms.TextBox()
         Me.Label55 = New System.Windows.Forms.Label()
@@ -855,7 +857,7 @@ Partial Class Main
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(823, 445)
+        Me.TabPage2.Size = New System.Drawing.Size(823, 453)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Deviation Data"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -1359,6 +1361,10 @@ Partial Class Main
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.btnOpenParentDir)
+        Me.TabPage1.Controls.Add(Me.btnOpenArchive)
+        Me.TabPage1.Controls.Add(Me.btnCreateArchive)
+        Me.TabPage1.Controls.Add(Me.btnShowProjectInfo)
         Me.TabPage1.Controls.Add(Me.chkConnect)
         Me.TabPage1.Controls.Add(Me.btnOpenProject)
         Me.TabPage1.Controls.Add(Me.Label57)
@@ -1376,9 +1382,7 @@ Partial Class Main
         Me.TabPage1.Controls.Add(Me.Label79)
         Me.TabPage1.Controls.Add(Me.txtSystemLocationType)
         Me.TabPage1.Controls.Add(Me.txtSystemPath)
-        Me.TabPage1.Controls.Add(Me.Label52)
         Me.TabPage1.Controls.Add(Me.txtCurrentDuration)
-        Me.TabPage1.Controls.Add(Me.Label53)
         Me.TabPage1.Controls.Add(Me.Label54)
         Me.TabPage1.Controls.Add(Me.txtTotalDuration)
         Me.TabPage1.Controls.Add(Me.Label55)
@@ -1402,10 +1406,49 @@ Partial Class Main
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(705, 445)
+        Me.TabPage1.Size = New System.Drawing.Size(823, 453)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Project Information"
         Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'btnOpenParentDir
+        '
+        Me.btnOpenParentDir.Location = New System.Drawing.Point(125, 398)
+        Me.btnOpenParentDir.Name = "btnOpenParentDir"
+        Me.btnOpenParentDir.Size = New System.Drawing.Size(125, 22)
+        Me.btnOpenParentDir.TabIndex = 311
+        Me.btnOpenParentDir.Text = "Open Parent Directory"
+        Me.ToolTip1.SetToolTip(Me.btnOpenParentDir, "Open the Parent directory")
+        Me.btnOpenParentDir.UseVisualStyleBackColor = True
+        '
+        'btnOpenArchive
+        '
+        Me.btnOpenArchive.Location = New System.Drawing.Point(354, 398)
+        Me.btnOpenArchive.Name = "btnOpenArchive"
+        Me.btnOpenArchive.Size = New System.Drawing.Size(94, 22)
+        Me.btnOpenArchive.TabIndex = 310
+        Me.btnOpenArchive.Text = "Open Archive"
+        Me.ToolTip1.SetToolTip(Me.btnOpenArchive, "Open a project archive file")
+        Me.btnOpenArchive.UseVisualStyleBackColor = True
+        '
+        'btnCreateArchive
+        '
+        Me.btnCreateArchive.Location = New System.Drawing.Point(256, 398)
+        Me.btnCreateArchive.Name = "btnCreateArchive"
+        Me.btnCreateArchive.Size = New System.Drawing.Size(92, 22)
+        Me.btnCreateArchive.TabIndex = 309
+        Me.btnCreateArchive.Text = "Create Archive"
+        Me.ToolTip1.SetToolTip(Me.btnCreateArchive, "Create a project archive file")
+        Me.btnCreateArchive.UseVisualStyleBackColor = True
+        '
+        'btnShowProjectInfo
+        '
+        Me.btnShowProjectInfo.Location = New System.Drawing.Point(6, 398)
+        Me.btnShowProjectInfo.Name = "btnShowProjectInfo"
+        Me.btnShowProjectInfo.Size = New System.Drawing.Size(113, 22)
+        Me.btnShowProjectInfo.TabIndex = 308
+        Me.btnShowProjectInfo.Text = "Show Project Info"
+        Me.btnShowProjectInfo.UseVisualStyleBackColor = True
         '
         'chkConnect
         '
@@ -1563,30 +1606,12 @@ Partial Class Main
         Me.txtSystemPath.Size = New System.Drawing.Size(561, 46)
         Me.txtSystemPath.TabIndex = 88
         '
-        'Label52
-        '
-        Me.Label52.AutoSize = True
-        Me.Label52.Location = New System.Drawing.Point(562, 373)
-        Me.Label52.Name = "Label52"
-        Me.Label52.Size = New System.Drawing.Size(41, 13)
-        Me.Label52.TabIndex = 79
-        Me.Label52.Text = "d:h:m:s"
-        '
         'txtCurrentDuration
         '
         Me.txtCurrentDuration.Location = New System.Drawing.Point(471, 370)
         Me.txtCurrentDuration.Name = "txtCurrentDuration"
-        Me.txtCurrentDuration.Size = New System.Drawing.Size(85, 20)
+        Me.txtCurrentDuration.Size = New System.Drawing.Size(120, 20)
         Me.txtCurrentDuration.TabIndex = 78
-        '
-        'Label53
-        '
-        Me.Label53.AutoSize = True
-        Me.Label53.Location = New System.Drawing.Point(374, 373)
-        Me.Label53.Name = "Label53"
-        Me.Label53.Size = New System.Drawing.Size(41, 13)
-        Me.Label53.TabIndex = 77
-        Me.Label53.Text = "d:h:m:s"
         '
         'Label54
         '
@@ -1601,7 +1626,7 @@ Partial Class Main
         '
         Me.txtTotalDuration.Location = New System.Drawing.Point(283, 370)
         Me.txtTotalDuration.Name = "txtTotalDuration"
-        Me.txtTotalDuration.Size = New System.Drawing.Size(85, 20)
+        Me.txtTotalDuration.Size = New System.Drawing.Size(120, 20)
         Me.txtTotalDuration.TabIndex = 75
         '
         'Label55
@@ -2020,9 +2045,7 @@ Partial Class Main
     Friend WithEvents txtInterpolateddX As TextBox
     Friend WithEvents Label49 As Label
     Friend WithEvents Label48 As Label
-    Friend WithEvents Label52 As Label
     Friend WithEvents txtCurrentDuration As TextBox
-    Friend WithEvents Label53 As Label
     Friend WithEvents Label54 As Label
     Friend WithEvents txtTotalDuration As TextBox
     Friend WithEvents Label55 As Label
@@ -2052,4 +2075,8 @@ Partial Class Main
     Friend WithEvents ContextMenuStrip2 As ContextMenuStrip
     Friend WithEvents ToolStripMenuItem1_EditWorkflowTabPage As ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem1_ShowStartPageInWorkflowTab As ToolStripMenuItem
+    Friend WithEvents btnOpenParentDir As Button
+    Friend WithEvents btnOpenArchive As Button
+    Friend WithEvents btnCreateArchive As Button
+    Friend WithEvents btnShowProjectInfo As Button
 End Class
